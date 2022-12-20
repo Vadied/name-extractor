@@ -9,14 +9,10 @@ const Extractor = () => {
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
 
-  const setData = (number) => {
-    setName(names[number]);
-  };
-
   const handleClick = (number) => {
     setLoading(true);
     setTimeout(() => setLoading(false), 1500);
-    setData(number);
+    setName(names[number]);
   };
 
   return (

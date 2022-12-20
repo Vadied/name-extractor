@@ -3,7 +3,7 @@ import Button from "../button";
 import { names } from "../extractor/constants";
 
 const FakeButton = ({ handleClick }) => {
-  const onClicK = () => {
+  const onClick = () => {
     const random = Math.floor(Math.random() * names.length);
     handleClick(random);
   };
@@ -12,7 +12,7 @@ const FakeButton = ({ handleClick }) => {
     <div className="button">
       <div className="btn std-1" onClick={() => handleClick(16)}></div>
       <Button
-        handleClick={onClicK}
+        handleClick={onClick}
         tooltip="Clicca per estrarre"
         content="Estrai"
       />
