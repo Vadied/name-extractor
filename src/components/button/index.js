@@ -1,10 +1,13 @@
+import Tooltip from "@mui/material/Tooltip";
 import "./style.css";
 
-const Button = ({ handleClick }) => {
+const Button = ({ handleClick, tooltip = "", content = "" }) => {
   return (
-    <div className="button" onClick={handleClick}>
-      Estrai
-    </div>
+    <Tooltip title={tooltip}>
+      <div className="ext-button" onClick={handleClick}>
+        {content}
+      </div>
+    </Tooltip>
   );
 };
 

@@ -1,31 +1,18 @@
 import { useState } from "react";
 import "./style.css";
 
-import Button from "../button";
-
 import { names } from "./constants";
 import Loader from "../loader";
+import FakeButton from "../fakeButton";
 
 const Extractor = () => {
   const [loading, setLoading] = useState(false);
-  const [count, setCount] = useState(0);
   const [name, setName] = useState("");
 
-  const setData = (number) => {
-    setCount(count + 1);
-    setName(names[number]);
-  };
-
-  const handleClick = () => {
+  const handleClick = (number) => {
     setLoading(true);
-    setTimeout(() => setLoading(false), 1500)
-
-    if (count === 0) return setData(16);
-
-    if (count === 1) return setData(5);
-
-    const random = Math.floor(Math.random() * names.length);
-    return setData(random);
+    setTimeout(() => setLoading(false), 1500);
+    setName(names[number]);
   };
 
   return (
@@ -35,7 +22,7 @@ const Extractor = () => {
         {loading && <Loader />}
         {!loading && name}
       </div>
-      <Button handleClick={handleClick} />
+      <FakeButton handleClick={handleClick} />
     </div>
   );
 };

@@ -2,12 +2,12 @@ import "./App.css";
 
 import Extractor from "./components/extractor";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Extractor />
     </div>
   );
-}
+};
 
 export default App;
