@@ -10,13 +10,13 @@ const FakeButton = ({ handleClick }) => {
 
   return (
     <div className="button">
-      <div className="btn std-1" onClick={() => handleClick(16)}></div>
+      <div className="btn std-1" onClick={() => handleClick(10)}></div>
       <Button
         handleClick={onClick}
         tooltip="Clicca per estrarre"
         content="Estrai"
       />
-      <div className="btn std-2" onClick={() => handleClick(5)}></div>
+      <div className="btn std-2" onClick={() => handleClick(11)}></div>
     </div>
   );
 };
